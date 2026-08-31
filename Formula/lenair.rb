@@ -9,6 +9,7 @@ class Lenair < Formula
   sha256 "82df38846a65406b003b534d9dd8d5967d464370cb8327848bbbae05f2f431ab"
   license "MIT"
 
+  depends_on arch: :arm64
   depends_on :macos
 
   def install
