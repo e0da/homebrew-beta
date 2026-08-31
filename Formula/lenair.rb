@@ -6,13 +6,14 @@ class Lenair < Formula
   homepage "https://github.com/e0da/lenair"
   url "https://github.com/e0da/homebrew-beta/releases/download/v0.1.0-rc1/lenair-darwin-arm64-v0.1.0-rc1-lenair.tar.gz"
   version "0.1.0-rc1"
-  sha256 "10879066c6a82d6d9e0c9ad38cbcd538fd275214ea0a1424966b0963fabd79ba"
+  sha256 "82df38846a65406b003b534d9dd8d5967d464370cb8327848bbbae05f2f431ab"
   license "MIT"
 
   depends_on :macos
 
   def install
     bin.install "bin/lenair"
+    prefix.install "LICENSE"
   end
 
   test do
