@@ -20,7 +20,7 @@ class WorldModeler < Formula
 
   test do
     bootstrap = pkgshare/"world-model.bootstrap.json"
-    assert_equal "1.1.0", shell_output("#{bin}/world-modeler --version").strip
+    assert_equal version.to_s, shell_output("#{bin}/world-modeler --version").strip
     assert_match "Usage:", shell_output("#{bin}/world-modeler --help")
     assert_match '"valid": true', shell_output("#{bin}/world-modeler validate #{bootstrap}")
     assert_match "world-model.inspect/v1", shell_output("#{bin}/world-modeler capabilities #{bootstrap}")
