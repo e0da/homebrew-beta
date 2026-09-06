@@ -4,9 +4,9 @@
 class WorldModeler < Formula
   desc "Portable capability-based runtime for JSON and JSONL world models"
   homepage "https://github.com/e0da/world-modeler"
-  url "https://github.com/e0da/homebrew-beta/releases/download/world-modeler-v1.4.0/world-modeler-darwin-arm64-v1.4.0-world-modeler.tar.gz"
-  version "1.4.0"
-  sha256 "2c544b2c4f37f7d01368c7a7c3f0bf344fa18df9abe8c6c9785456dab75ee0e6"
+  url "https://github.com/e0da/homebrew-beta/releases/download/world-modeler-v1.5.0/world-modeler-darwin-arm64-v1.5.0-world-modeler.tar.gz"
+  version "1.5.0"
+  sha256 "db4ff6fd894bf5674f04102cf6c76be836a9f63a83ce9d0cd63bc56ffa9905a8"
   license "MIT"
 
   depends_on arch: :arm64
