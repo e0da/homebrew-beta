@@ -4,9 +4,9 @@
 class Lenair < Formula
   desc "Agent-first Linear CLI"
   homepage "https://github.com/e0da/lenair"
-  url "https://github.com/e0da/homebrew-beta/releases/download/v0.1.1/lenair-darwin-arm64-v0.1.1-lenair.tar.gz"
-  version "0.1.1"
-  sha256 "4c92083b5ea7c7d7c5ecd94a775eebc5e0e0efaea7b01e6c8072f8317a362080"
+  url "https://github.com/e0da/homebrew-beta/releases/download/v0.2.0/lenair-darwin-arm64-v0.2.0-lenair.tar.gz"
+  version "0.2.0"
+  sha256 "85cbc7df18261d21427ba5e03a358a3935bdfa5afee8692bbeeab30530313ae4"
   license "MIT"
 
   depends_on arch: :arm64
