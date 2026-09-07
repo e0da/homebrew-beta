@@ -34,4 +34,15 @@ no outside access) before release assets are ever pushed here.
 
 ## Formulae
 
-None yet. The first is `lenair` (E0D-1596/1597).
+See [Formula](Formula) for the available products.
+
+The standalone Elixir World Modeler preview is a separate, opt-in package:
+
+```sh
+brew install e0da/beta/world-modeler-elixir-preview
+world-modeler-elixir-preview --help
+```
+
+It requires Apple Silicon and macOS 26 or later and includes its own runtime.
+The existing `world-modeler` formula and command remain unchanged; installing
+the preview does not migrate existing models or change the reference command.
