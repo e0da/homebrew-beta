@@ -5,9 +5,9 @@ require "json"
 class WorldModelerElixirPreview < Formula
   desc "Standalone Elixir preview of the World Modeler knowledge runtime"
   homepage "https://github.com/e0da/world-modeler"
-  url "https://github.com/e0da/homebrew-beta/releases/download/world-modeler-elixir-preview-v2.0.0-pre.1/world-modeler-elixir-preview-darwin-arm64-v2.0.0-pre.1-world-modeler-elixir-preview.tar.gz"
-  version "2.0.0-pre.1"
-  sha256 "1d63e8d26a5eef6b2179031fe2d6a3cf9c57257339917ec6a9f031cd1bbbb23c"
+  url "https://github.com/e0da/homebrew-beta/releases/download/world-modeler-elixir-preview-v2.0.0-pre.2/world-modeler-elixir-preview-darwin-arm64-v2.0.0-pre.2-world-modeler-elixir-preview.tar.gz"
+  version "2.0.0-pre.2"
+  sha256 "cc9ee98322e0ba5bbd423ef99505bfb1c350af1c3c5bedcb9880e8169d03b58c"
   license "MIT"
 
   depends_on arch: :arm64
