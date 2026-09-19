@@ -36,13 +36,17 @@ no outside access) before release assets are ever pushed here.
 
 See [Formula](Formula) for the available products.
 
-The standalone Elixir World Modeler preview is a separate, opt-in package:
+World Modeler's standard package is the native Elixir runtime:
 
 ```sh
-brew install e0da/beta/world-modeler-elixir-preview
-world-modeler-elixir-preview --help
+brew install e0da/beta/world-modeler
+world-modeler model --help
 ```
 
 It requires Apple Silicon and macOS 26 or later and includes its own runtime.
-The existing `world-modeler` formula and command remain unchanged; installing
-the preview does not migrate existing models or change the reference command.
+Upgrading from v1 replaces the standard command with the incompatible native CLI;
+it does not migrate or delete existing models. The initial native default reuses
+the immutable `2.0.0-pre.4` preview archive; it is not a stable-version claim.
+The old `world-modeler-elixir-preview` formula remains frozen for existing native
+callers and can coexist without command conflicts. Future native publication
+updates `world-modeler` only. Existing release assets remain available.
