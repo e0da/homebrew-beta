@@ -1,0 +1,49 @@
+name: Mozak idea
+description: Suggest a capability or a change to how Mozak works.
+title: "[Mozak idea] "
+labels: ["mozak"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Run `mozak feedback idea --open` to open this form with the three environment fields below already filled in. If they are empty, run `mozak feedback idea` and paste the lines it prints.
+  - type: input
+    id: version
+    attributes:
+      label: Mozak version
+      description: Printed by `mozak --version`.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: OS and architecture
+      description: For example, `darwin arm64`.
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Doctor summary
+      description: The `Doctor:` line from `mozak feedback`.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What you were trying to do
+      description: The task or the commands you ran when you wanted this.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you wish happened
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happens today
+    validations:
+      required: true

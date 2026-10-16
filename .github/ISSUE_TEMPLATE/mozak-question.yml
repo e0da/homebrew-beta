@@ -1,0 +1,49 @@
+name: Mozak question
+description: Ask how Mozak works or how to do something with it.
+title: "[Mozak question] "
+labels: ["mozak"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Run `mozak feedback question --open` to open this form with the three environment fields below already filled in. If they are empty, run `mozak feedback question` and paste the lines it prints.
+  - type: input
+    id: version
+    attributes:
+      label: Mozak version
+      description: Printed by `mozak --version`.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: OS and architecture
+      description: For example, `darwin arm64`.
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Doctor summary
+      description: The `Doctor:` line from `mozak feedback`.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What you tried
+      description: The commands you ran, in order.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What you saw, or what you are unsure about
+    validations:
+      required: true
