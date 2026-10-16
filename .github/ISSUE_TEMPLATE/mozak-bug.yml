@@ -1,0 +1,55 @@
+name: Mozak bug
+description: Something in Mozak does not work as it should.
+title: "[Mozak bug] "
+labels: ["mozak"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Run `mozak feedback bug --open` to open this form with the three environment fields below already filled in. If they are empty, run `mozak feedback bug` and paste the lines it prints.
+
+        Do not paste tokens, passwords, or page content you would not post publicly.
+  - type: input
+    id: version
+    attributes:
+      label: Mozak version
+      description: Printed by `mozak --version`.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: OS and architecture
+      description: For example, `darwin arm64`.
+    validations:
+      required: true
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Doctor summary
+      description: The `Doctor:` line from `mozak feedback`.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: The commands you ran, in order.
+      placeholder: |
+        1. mozak start --wait
+        2. mozak open ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual result
+      description: What happened instead. Include error text, with any paths or tokens removed.
+    validations:
+      required: true

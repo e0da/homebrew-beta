@@ -50,3 +50,14 @@ the immutable `2.0.0-pre.4` preview archive; it is not a stable-version claim.
 The old `world-modeler-elixir-preview` formula remains frozen for existing native
 callers and can coexist without command conflicts. Future native publication
 updates `world-modeler` only. Existing release assets remain available.
+
+## Reporting problems
+
+Mozak bugs, ideas, and questions go in this repo's issues. From a terminal,
+run `mozak feedback bug --open` (or `idea`, `question`): it opens the matching
+issue form with the Mozak version, OS, architecture, and a short doctor
+summary already filled in. Those details never include paths, tokens, or page
+content.
+
+Security vulnerabilities do not go in public issues. Use
+[private vulnerability reporting](https://github.com/e0da/homebrew-beta/security/advisories/new).
