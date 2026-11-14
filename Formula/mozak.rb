@@ -4,9 +4,9 @@
 class Mozak < Formula
   desc "Portable browser automation CLI with Docker-backed Chrome runtime"
   homepage "https://github.com/e0da/mozak"
-  url "https://github.com/e0da/homebrew-beta/releases/download/v0.2.0-pre.14/mozak-darwin-universal-v0.2.0-pre.14-mozak.tar.gz"
-  version "0.2.0-pre.14"
-  sha256 "ef42658c3e555ca0f13311a0164b4e88d5f85130d0eb616d85d16e3ec8f15a06"
+  url "https://github.com/e0da/homebrew-beta/releases/download/v0.3.0/mozak-darwin-universal-v0.3.0-mozak.tar.gz"
+  version "0.3.0"
+  sha256 "2eec934e67c30164964b6fd6cb3f216f46ef387c6878a2136f3122bfdba1c09e"
   license :cannot_represent
 
   depends_on :macos
