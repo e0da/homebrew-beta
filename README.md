@@ -35,3 +35,7 @@ no outside access) before release assets are ever pushed here.
 ## Formulae
 
 See [Formula](Formula) for the available products.
+
+## Formula CI
+
+Pull requests and main pushes that change formulas run Ruby syntax and Homebrew metadata audits on a disposable hosted macOS runner. The check installs no formula. Lenair and Mozak keep explicit version stanzas because their shared release publisher requires and updates those lines; Homebrew's version audit is excluded for those two generated formulas. CI separately requires those explicit version lines. All other metadata audits still run, and other formulas retain version auditing.
