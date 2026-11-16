@@ -1,0 +1,51 @@
+name: Formula audit
+
+on:
+  pull_request:
+    paths:
+      - 'Formula/**'
+      - '.github/workflows/formula-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'Formula/**'
+      - '.github/workflows/formula-audit.yml'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: formula-audit-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  formula-audit:
+    runs-on: macos-latest
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: '1'
+      HOMEBREW_NO_ANALYTICS: '1'
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Check every formula's Ruby syntax
+        run: |
+          for formula in Formula/*.rb; do
+            ruby -c "$formula"
+          done
+          for formula in Formula/lenair.rb Formula/mozak.rb; do
+            grep -Eq '^  version "[^"]+"$' "$formula"
+          done
+      - name: Audit the checked-out tap
+        run: |
+          brew tap e0da/beta "$GITHUB_WORKSPACE"
+          brew trust e0da/beta
+          for formula in Formula/*.rb; do
+            name="${formula##*/}"
+            name="${name%.rb}"
+            audit_flags=(--skip-style)
+            case "$name" in
+              lenair|mozak) audit_flags+=(--except=version) ;;
+            esac
+            brew audit "${audit_flags[@]}" "e0da/beta/$name"
+          done
