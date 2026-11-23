@@ -3,7 +3,7 @@
 # Homebrew package for the public Mozak release artifact.
 class Mozak < Formula
   desc "Portable browser automation CLI with Docker-backed Chrome runtime"
-  homepage "https://github.com/e0da/mozak"
+  homepage "https://github.com/e0da/homebrew-beta/blob/main/docs/mozak.md"
   url "https://github.com/e0da/homebrew-beta/releases/download/v0.3.0/mozak-darwin-universal-v0.3.0-mozak.tar.gz"
   version "0.3.0"
   sha256 "2eec934e67c30164964b6fd6cb3f216f46ef387c6878a2136f3122bfdba1c09e"
@@ -46,7 +46,7 @@ class Mozak < Formula
       Use `brew reinstall e0da/beta/mozak` only to intentionally reinstall
       the same formula version. After an upgrade, follow Mozak's managed Chrome
       update guidance for doctor, any prescribed restart, and page verification:
-        https://github.com/e0da/mozak#upgrade-an-existing-installation
+        https://github.com/e0da/homebrew-beta/blob/main/docs/mozak.md#upgrade-an-existing-installation
     EOS
   end
 

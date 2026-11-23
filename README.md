@@ -21,20 +21,13 @@ assets are public, so `brew install` needs no token at all.
 | release asset visibility | private | public |
 | formula `url` | `GitHubPrivateReleaseAssetDownloadStrategy` | plain `url` + `sha256` |
 | install requires a token | yes | no |
-| Actions / workflows | yes (formula CI) | **none, by design** |
-
-## Zero workflows, on purpose
-
-This repo ships no GitHub Actions workflows. That's the enforcement mechanism
-for keeping a public repo safe from stranger-triggered CI, not a convention
-that happens to be true today — see
-`ops/docs/homebrew-public-tap-standard.md` for the full rationale. Formula
-validation for products on this tap runs in the product's own repo (private,
-no outside access) before release assets are ever pushed here.
+| Actions / workflows | yes (formula CI) | formula syntax and metadata audits |
 
 ## Formulae
 
 See [Formula](Formula) for the available products.
+
+- [Mozak beta guide](docs/mozak.md) covers installation, upgrades, and configuration for the browser automation CLI and MCP server.
 
 ## Formula CI
 
